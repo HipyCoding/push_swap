@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
+/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 04:39:03 by candrese          #+#    #+#             */
-/*   Updated: 2024/06/18 08:44:03 by candrese         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:46:14 by christian        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,7 @@ void	push_element_to_a(t_stack_node **a, t_stack_node **b)
 
 void	rotate_until_sorted(t_stack_node **a, int size)
 {
-	int	i;
 
-	i = 0;
 	get_positions(*a);
 	if (check_max(*a)->position > size / 2)
 	{
@@ -107,7 +105,6 @@ void	rotate_until_sorted(t_stack_node **a, int size)
 		{
 			get_positions(*a);
 			rra(a, 1);
-			i++;
 			get_positions(*a);
 		}
 	}
@@ -117,7 +114,6 @@ void	rotate_until_sorted(t_stack_node **a, int size)
 		{
 			get_positions(*a);
 			ra(a, 1);
-			i++;
 			get_positions(*a);
 		}
 	}
