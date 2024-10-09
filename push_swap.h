@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
+/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 12:39:31 by candrese          #+#    #+#             */
-/*   Updated: 2024/06/18 14:25:49 by candrese         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:34:27 by christian        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+
+# include "get_next_line/get_next_line.h"
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdbool.h>
@@ -58,6 +60,7 @@ void			big_sort(t_stack_node **a, t_stack_node **b, int size);
 
 //utils & free and exit
 void			putstr_fd(char *s, int fd);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 void			error_fd(int fd);
 long long		my_atolong(const char *s, int *error);
 char			**ft_split(char const *s, char c);
